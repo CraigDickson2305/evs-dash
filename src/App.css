@@ -1,38 +1,121 @@
+/* Overall Styles */
 .App {
   text-align: center;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+/* Custom Properties */
+:root {
+  --evsorange: #cc5500;
+  --amplify-primary-color: #cc5500;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+/* Login Page BG */
+amplify-authenticator {
+  background: var(--evsorange);
+  width: 100vw;
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+/* Header */
+.evs-header {
+  background-color: gainsboro;
+  height: 10vh;
   display: flex;
-  flex-direction: column;
   align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
+  justify-content: space-between;
   color: white;
+  padding: 0 10vh 0 10vh;
+  font-size: 1.5rem;
 }
 
-.App-link {
-  color: #61dafb;
+.logoEvs {
+  width: 200px;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
+.signOut {
+  padding-right: 20vw;
+}
+
+.vertical-divider {
+  display: inline-block;
+  margin-left: 10px;
+  margin-right: 10px;
+  height: 50px;
+  background-color: var(--evsorange);
+  width: 1px;
+}
+
+.charge-text {
+  color: var(--evsorange);
+  display: inline-block;
+  text-align: left;
+}
+
+.evs-header-bar {
+  background-color: var(--evsorange);
+  height: 5vh;
+}
+
+/* Footer */
+.evs-footer {
+  background-color: var(--evsorange);
+  height: 75px;
+  display: flex;
+  align-items: center;
+  justify-content: right;
+  font-size: 1.5rem;
+  color: white;
+  padding-right: 50px;
+}
+
+.footer-text {
+  color: white;
+  font-size: 1.5rem;
+  display: inline-block;
+  margin-right: 20px;
+  text-decoration: none;
+  color: inherit;
+  cursor: pointer;
+}
+
+@media (max-width: 500px) {
+  .evs-header {
+    background-color: gainsboro;
+    height: 12vh;
+    display: block;
+    align-items: center;
+    padding: 2vh 5vh 0 5vh;
+    font-size: 1.5rem;
   }
-  to {
-    transform: rotate(360deg);
+
+  .logoEvs {
+    width: 200px;
+    align-self: center;
+  }
+
+  .vertical-divider {
+    display: none;
+  }
+
+  .charge-text {
+    display: none;
+  }
+
+  .evs-header-bar {
+    height: 2vh;
+  }
+
+  .evs-footer {
+    background-color: var(--evsorange);
+    height: 75px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 0;
+    margin-bottom: 2vh;
+  }
+
+  .footer-text {
+    margin-left: 10px;
+    margin-right: 10px;
   }
 }
